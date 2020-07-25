@@ -6,3 +6,4 @@ pytest-cov==2.10.*
 requests==2.24.*
 responses==0.10.*
 tox==3.18.*
+tox-pyenv==1.1.*
