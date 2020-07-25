@@ -1,12 +1,10 @@
-import pytest
-try:
-    from unittest.mock import patch
-except ImportError:
-    from mock import patch
+from unittest.mock import patch
 
-from . import assert_jsonrpc_calls, responses  # noqa
+import pytest
 
 from factom.client import Factomd, FactomWalletd
+
+from . import assert_jsonrpc_calls, responses  # noqa
 
 
 FA_1 = 'FA2jK2HcLnRdS94dEcU27rF3meoJfpUcZPSinpb7AwQvPRY6RL1Q'
