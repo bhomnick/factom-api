@@ -8,6 +8,10 @@ def assert_jsonrpc_calls(resp_mock, calls):
     assert len(calls) == len(resp_mock.calls), "Unexpected call count"
     for call, expected in zip(resp_mock.calls, calls):
         data = json.loads(call.request.body.decode())
+
+        print(data['method'])
+        print(data['params'])
+        print(expected)
         assert expected == (data['method'], data['params'])
 
 
